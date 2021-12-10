@@ -2,6 +2,15 @@
 const mongoose = require('mongoose');
 const Movie = require("../models/Movie.model");
 
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/library-project";
+
+mongoose.connect(MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
+});
+
 const movies = [
     {
       title: "A Wrinkle in Time",

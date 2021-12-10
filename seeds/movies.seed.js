@@ -1,5 +1,5 @@
 // To insert in "seeds/movies.seed.js"
-
+const mongoose = require('mongoose');
 const Movie = require("../models/Movie.model");
 
 const movies = [
@@ -88,5 +88,12 @@ const movies = [
   // Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
   
   // ... your code here
-  module.exports = Movie;
-  Movie.insertMany();
+
+Movie.create(movies)
+  .then(moviesFromDB => {
+    console.log(`Created ${moviesFromDB.length} movies`);
+
+    // Once created, close the DB connection
+    mongoose.connection.close();
+  })
+  .catch(err => console.log(`An error occurred while creating movies from the DB: ${err}`));

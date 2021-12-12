@@ -9,10 +9,10 @@ router.get('/', (req, res) => res.render('index'));
 
 router.get('/movies', (req, res, next) => {
     Movie.find({})
-      .then((pelis) => {
-        // -> pelis is a placeholder, it can be any word
-        console.log('Retrieved movies from DB:', pelis);
-          res.render('movies', { pelis });
+      .then((movies) => {
+        // -> movies is a placeholder, it can be any word
+        console.log('Retrieved movies from DB:', movies);
+          res.render('movies', { movies });
       })
       .catch(error => {
         console.log('Error while getting the movies from the DB: ', error);

@@ -2,9 +2,9 @@
 <p>Click on the movie to check the showtimes!</p>
 
 {{#each movies}}
-  <div>
+  <div class="movies">
     <img src="{{ image }}">
-    <a href="/movies/{{ id }}">See more</a>
     <h3>{{ title }}</h3>
+    <a href="/movies/{{ id }}">See more</a>
   </div>
 {{/each}}

@@ -1,7 +1,6 @@
 <a href="/movies/">Go back</a>
-
-{{#each peli }}
-
+<div class="movie">
+    {{#each peli }}
         <img src="{{ image }}">
         <h3>{{ title }}</h3>
         <p>{{ director }}</p>
@@ -12,5 +11,5 @@
         {{/each}}
         <p>{{ description }}</p>
         <p>{{ showtimes }}</p>
-   
-{{/each}}
+    {{/each}}
+</div>

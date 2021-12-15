@@ -85,7 +85,7 @@ const movies = [
   }
 ];
 
-const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/library-project";
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/lab-express-cinema";
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
@@ -104,17 +104,6 @@ mongoose.connect(MONGO_URI, {
   mongoose.connection.close();
 }).catch(err => console.log(`An error occurred while creating movies from the DB: ${err}`));
 
-
-  
   // Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
   
   // ... your code here
-
-/* Movie.create(movies)
-  .then(moviesFromDB => {
-    console.log(`Created ${moviesFromDB.length} movies`);
-
-    // Once created, close the DB connection
-    mongoose.connection.close();
-  })
-  .catch(err => console.log(`An error occurred while creating movies from the DB: ${err}`)); */

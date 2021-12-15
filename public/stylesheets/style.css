@@ -1,10 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'sans-serif';
 }
 
 a {
   color: #00B7FF;
+  padding: 8px;
 }
 
 .home {
@@ -16,4 +22,96 @@ a {
 
 .home h1 {
   color: white;
+  font-size: 120px;
+  padding-bottom: 1rem;
+  line-height: 130px;
+}
+
+.index {
+  width: 600px;
+  position: absolute;
+  top: 150px;
+  right: 100px;
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: white;
+  transition:0.2s;
+}
+
+button a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #446888;
+  font-weight: bold;
+}
+
+button:hover a {
+  color: white;
+}
+
+button:hover {
+  background-color: #446888;
+}
+
+.movies {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 34px;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.detail {
+  display: flex;
+  margin: 15px;
+  width: 800px;
+}
+
+.movie-detail {
+  margin: 15px;
+}
+
+.movie-detail span {
+  font-size: 20px;
+}
+
+ul {
+  font-size: 18px;
+  list-style-position: inside;
+}
+
+li {
+  margin-top: 10px;
 }
